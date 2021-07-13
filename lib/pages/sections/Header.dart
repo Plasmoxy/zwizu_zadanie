@@ -33,7 +33,7 @@ class _HeaderState extends State<Header> {
     _refreshTimer = Timer.periodic(Duration(seconds: 1), (timer) {
       if (mounted)
         setState(() {
-          _countdownDuration = widget.tournament.date.difference(DateTime.now());
+          _countdownDuration = widget.tournament.date.difference(DateTime.now().toLocal());
         });
     });
     super.initState();
