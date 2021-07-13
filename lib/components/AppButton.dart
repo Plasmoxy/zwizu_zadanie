@@ -5,12 +5,14 @@ class AppButton extends StatelessWidget {
   final void Function() onPressed;
   final String title;
   final Color color;
+  final TextStyle? textStyle;
 
   const AppButton({
     Key? key,
     required this.onPressed,
     required this.title,
     required this.color,
+    this.textStyle,
   }) : super(key: key);
 
   @override
@@ -23,16 +25,17 @@ class AppButton extends StatelessWidget {
         children: [
           Text(
             this.title,
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              color: color,
-              fontSize: 16,
-            ),
+            style: textStyle ??
+                TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: color,
+                  fontSize: 17,
+                ),
           ),
           SizedBox(width: 5),
           FaIcon(
             FontAwesomeIcons.chevronRight,
-            size: 16,
+            size: 17,
             color: color,
           ),
         ],
