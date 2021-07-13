@@ -1,3 +1,4 @@
+/// Player model
 class Player {
   final String name;
   final String label;

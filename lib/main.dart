@@ -4,10 +4,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/pages/HomePage.dart';
 
+// Entry point
 void main() {
   runApp(MyApp());
 }
 
+/// Main app widget
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();

@@ -1,3 +1,4 @@
+/// Video entry model
 class VideoEntry {
   final String name;
   final String category;

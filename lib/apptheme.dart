@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+/// Contains color definitions, flutter theme data, button styles and image filters
 class AppTheme {
   static const yellow = Color(0xffffd302);
   static const black = Color(0xff161616);
@@ -9,6 +10,7 @@ class AppTheme {
   static const grey50 = Color(0xff8d8d8d);
   static const grey30 = Color(0xffc6c6c6);
 
+  /// get app theme data
   static ThemeData get theme => ThemeData(
         primaryColor: yellow,
         accentColor: yellow,
@@ -28,6 +30,7 @@ class AppTheme {
         ),
       );
 
+  /// Black-yellow elevated button style
   static ButtonStyle get blackElevatedButton => ElevatedButton.styleFrom(
         primary: AppTheme.black,
         onPrimary: AppTheme.yellow,
@@ -38,6 +41,7 @@ class AppTheme {
         padding: EdgeInsets.symmetric(horizontal: 26, vertical: 15),
       );
 
+  /// Black outlined button style
   static ButtonStyle get blackOutlinedButton => OutlinedButton.styleFrom(
         primary: AppTheme.black,
         side: BorderSide(width: 2.0, color: AppTheme.black),
@@ -47,6 +51,7 @@ class AppTheme {
         padding: EdgeInsets.symmetric(horizontal: 26, vertical: 15),
       );
 
+  /// Simple blur ImageFilter
   static ImageFilter blurFilter = ImageFilter.blur(
     sigmaX: 6.0,
     sigmaY: 6.0,

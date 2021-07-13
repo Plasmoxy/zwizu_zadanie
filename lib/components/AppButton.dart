@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+/// Application button with [title] and chevron icon.
 class AppButton extends StatelessWidget {
   final void Function()? onPressed;
   final String title;

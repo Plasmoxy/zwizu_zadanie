@@ -7,6 +7,10 @@ import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+/// Video section
+///
+/// Contains section header with a scrollable list of videos.
+/// Leads to EmptyPage on header button click.
 class VideoSection extends StatelessWidget {
   const VideoSection({Key? key}) : super(key: key);
 

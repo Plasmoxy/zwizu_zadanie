@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 
+/// Simple chip with grey background from [text].
 class AppChip extends StatelessWidget {
   final String text;
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/models/Player.dart';
 
+/// Single clickable player entry from a [player] model.
 class PlayerSingleElement extends StatelessWidget {
   final void Function()? onPressed;
   final Player player;

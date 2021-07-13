@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Masking widget with fading bottom into black color.
 class BottomFaded extends StatelessWidget {
   final Widget? child;
 

@@ -6,6 +6,10 @@ import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+/// Players section
+///
+/// Contains a header and scrollable list of players.
+/// Leads to EmptyPage on header button click.
 class PlayerSection extends StatelessWidget {
   const PlayerSection({Key? key}) : super(key: key);
 

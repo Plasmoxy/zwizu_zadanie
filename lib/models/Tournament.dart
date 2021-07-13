@@ -1,3 +1,4 @@
+/// Tournament model
 class Tournament {
   final String name;
   final DateTime date;

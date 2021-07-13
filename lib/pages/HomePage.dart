@@ -5,6 +5,9 @@ import 'package:zwizu_zadanie/pages/sections/Header.dart';
 import 'package:zwizu_zadanie/pages/sections/PlayerSection.dart';
 import 'package:zwizu_zadanie/pages/sections/VideoSection.dart';
 
+/// Home page
+///
+/// Includes background, header and sections.
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
 

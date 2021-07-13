@@ -7,6 +7,7 @@ import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppChip.dart';
 import 'package:zwizu_zadanie/models/VideoEntry.dart';
 
+/// Single clickable list video element from a [videoEntry] model.
 class VideoSingleElement extends StatelessWidget {
   final void Function() onPressed;
   final VideoEntry videoEntry;

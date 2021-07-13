@@ -3,6 +3,9 @@ import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+/// Header of a section
+///
+/// Contains a title and a clickable "more" button.
 class SectionHeader extends StatelessWidget {
   final String title;
   final void Function()? onMorePressed;

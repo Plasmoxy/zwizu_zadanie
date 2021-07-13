@@ -2,6 +2,7 @@ import 'package:zwizu_zadanie/models/Player.dart';
 import 'package:zwizu_zadanie/models/Tournament.dart';
 import 'package:zwizu_zadanie/models/VideoEntry.dart';
 
+/// Class with mock objects for testing
 class MockModels {
   static final MOCK_TOURNAMENT = Tournament(
     name: "Turnaj 22",

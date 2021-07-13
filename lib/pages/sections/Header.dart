@@ -10,6 +10,7 @@ import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+/// Header card with localized information about [tournament].
 class Header extends StatefulWidget {
   final Tournament tournament;
 
