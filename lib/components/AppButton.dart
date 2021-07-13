@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AppButton extends StatelessWidget {
-  final void Function() onPressed;
+  final void Function()? onPressed;
   final String title;
   final Color color;
   final TextStyle? textStyle;
 
   const AppButton({
     Key? key,
-    required this.onPressed,
     required this.title,
     required this.color,
+    this.onPressed,
     this.textStyle,
   }) : super(key: key);
 

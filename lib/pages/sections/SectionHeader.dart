@@ -4,8 +4,13 @@ import 'package:zwizu_zadanie/components/AppButton.dart';
 
 class SectionHeader extends StatelessWidget {
   final String title;
+  final void Function()? onMorePressed;
 
-  const SectionHeader({Key? key, required this.title}) : super(key: key);
+  const SectionHeader({
+    Key? key,
+    required this.title,
+    this.onMorePressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +24,7 @@ class SectionHeader extends StatelessWidget {
           ),
           Spacer(),
           AppButton(
-            onPressed: () => {},
+            onPressed: onMorePressed,
             color: AppTheme.yellow,
             title: "Více",
           ),

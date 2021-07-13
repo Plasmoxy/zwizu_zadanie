@@ -100,13 +100,13 @@ class _HeaderState extends State<Header> {
                   children: [
                     ElevatedButton(
                       child: Text('Koupit ZZP'),
-                      onPressed: () => {},
+                      onPressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
                       style: AppTheme.blackElevatedButton,
                     ),
                     SizedBox(width: 10),
                     OutlinedButton(
                       child: Text('Vstupenky'),
-                      onPressed: () => {},
+                      onPressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
                       style: AppTheme.blackOutlinedButton,
                     ),
                   ],
