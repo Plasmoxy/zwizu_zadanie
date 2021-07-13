@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/components/BottomFaded.dart';
 import 'package:zwizu_zadanie/mock/MockModels.dart';
-import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/pages/sections/Header.dart';
 import 'package:zwizu_zadanie/pages/sections/PlayerSection.dart';
 import 'package:zwizu_zadanie/pages/sections/VideoSection.dart';
-import 'package:zwizu_zadanie/util/ipsum.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);

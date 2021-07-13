@@ -1,11 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppChip.dart';
 import 'package:zwizu_zadanie/models/VideoEntry.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class VideoSingleElement extends StatelessWidget {
   final void Function() onPressed;

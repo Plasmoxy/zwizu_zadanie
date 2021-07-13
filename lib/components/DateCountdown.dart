@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:zwizu_zadanie/AppTheme.dart';
 
 class DateCountdown extends StatelessWidget {
   final Duration duration;
