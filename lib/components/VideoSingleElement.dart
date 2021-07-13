@@ -3,12 +3,15 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
+import 'package:zwizu_zadanie/models/VideoEntry.dart';
 
 class VideoSingleElement extends StatelessWidget {
   final void Function() onPressed;
+  final VideoEntry videoEntry;
 
   const VideoSingleElement({
     Key? key,
+    required this.videoEntry,
     required this.onPressed,
   }) : super(key: key);
 
@@ -23,17 +26,26 @@ class VideoSingleElement extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // image
+            // video image with play button and premium banner
             Card(
+              margin: EdgeInsets.zero,
               child: Stack(
                 children: [
                   // image of video
-                  Image.asset(
-                    "assets/tournament.jpg",
-                    width: double.infinity, // adapt to container width
-                    height: 130,
-                    fit: BoxFit.cover,
-                  ),
+                  if (videoEntry.imageUrl == null)
+                    Image.asset(
+                      "assets/tournament.jpg",
+                      width: double.infinity, // adapt to container width
+                      height: 130,
+                      fit: BoxFit.cover,
+                    )
+                  else
+                    Image.network(
+                      videoEntry.imageUrl!,
+                      width: double.infinity, // adapt to container width
+                      height: 130,
+                      fit: BoxFit.cover,
+                    ),
 
                   // play circle
                   Positioned.fill(
@@ -87,10 +99,10 @@ class VideoSingleElement extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 4),
+            SizedBox(height: 10),
             // category
             Text(
-              "TURNAJ 20".toUpperCase(),
+              videoEntry.category.toUpperCase(),
               style: TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
@@ -100,7 +112,7 @@ class VideoSingleElement extends StatelessWidget {
             SizedBox(height: 4),
             // video title
             Text(
-              "Souboj o truny xdxd 2 riadky mocno mocno",
+              videoEntry.name,
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w600,
