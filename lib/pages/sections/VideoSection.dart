@@ -11,7 +11,9 @@ class VideoSection extends StatelessWidget {
       child: Column(
         children: [
           SectionHeader(title: "Právě letí"),
-          VideoSingleElement(),
+          VideoSingleElement(
+            onPressed: () => {},
+          ),
         ],
       ),
     );
