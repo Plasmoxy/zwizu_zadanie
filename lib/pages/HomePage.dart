@@ -43,9 +43,9 @@ class _HomePageState extends State<HomePage> {
                   VideoSection(),
                   const SizedBox(height: 12),
                   PlayerSection(),
+                  const SizedBox(height: 100),
                 ],
               ),
-              // image
             ],
           ),
         ),
