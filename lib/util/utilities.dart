@@ -9,4 +9,14 @@ class Utilities {
       ),
     );
   }
+
+  static DateFormat czskDateFormatString(BuildContext context) {
+    return DateFormat("EE dd. MM. yyyy 'v' HH:mm", Localizations.localeOf(context).languageCode);
+  }
+}
+
+extension StringExtension on String {
+  String capitalize() {
+    return "${this[0].toUpperCase()}${this.substring(1)}";
+  }
 }

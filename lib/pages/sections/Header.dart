@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
 import 'package:zwizu_zadanie/components/DateCountdown.dart';
@@ -73,7 +74,7 @@ class _HeaderState extends State<Header> {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    'So 07. 07. 2022 v 19:00',
+                    Utilities.czskDateFormatString(context).format(widget.tournament.date).capitalize(),
                     style: TextStyle(fontWeight: FontWeight.w300, fontSize: 16),
                   ),
                   AppButton(
