@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:zwizu_zadanie/apptheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
 
 class Header extends StatelessWidget {
@@ -22,7 +23,7 @@ class Header extends StatelessWidget {
               sigmaY: 6.0,
             ),
             child: Container(
-              color: const Color(0xff373737).withOpacity(0.7),
+              color: AppTheme.grey.withOpacity(0.7),
               width: double.infinity,
               padding: EdgeInsets.all(16.0),
               child: Column(
@@ -51,7 +52,7 @@ class Header extends StatelessWidget {
             ),
           ),
           Container(
-            color: const Color(0xffffd302),
+            color: Theme.of(context).primaryColor,
             width: double.infinity,
             padding: EdgeInsets.all(16),
             child: Column(
@@ -61,7 +62,7 @@ class Header extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
                     letterSpacing: 1,
-                    color: Colors.black,
+                    color: AppTheme.black,
                   ),
                 ),
                 SizedBox(height: 10),
@@ -72,30 +73,13 @@ class Header extends StatelessWidget {
                     ElevatedButton(
                       child: Text('Koupit ZZP'),
                       onPressed: () => {},
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.black,
-                        onPrimary: Colors.yellow,
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        padding: EdgeInsets.symmetric(horizontal: 23, vertical: 12),
-                        textStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
+                      style: AppTheme.blackElevatedButton,
                     ),
                     SizedBox(width: 5),
                     OutlinedButton(
                       child: Text('Vstupenky'),
                       onPressed: () => {},
-                      style: OutlinedButton.styleFrom(
-                        primary: Colors.black,
-                        side: BorderSide(width: 2.0, color: Colors.black),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        padding: EdgeInsets.symmetric(horizontal: 23, vertical: 12),
-                        textStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-                      ),
+                      style: AppTheme.blackOutlinedButton,
                     ),
                   ],
                 ),

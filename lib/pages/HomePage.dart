@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff161616),
+      backgroundColor: Theme.of(context).backgroundColor,
       body: Scrollbar(
         child: SingleChildScrollView(
           child: Stack(

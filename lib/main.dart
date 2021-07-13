@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zwizu_zadanie/apptheme.dart';
 import 'package:zwizu_zadanie/pages/HomePage.dart';
 
 void main() {
@@ -11,11 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Zwizu zadanie',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        brightness: Brightness.dark,
-        fontFamily: "Silka",
-      ),
+      theme: AppTheme.theme,
       home: HomePage(),
     );
   }
