@@ -17,7 +17,7 @@ class PlayerSection extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => PlayerSingleElement(onPressed: () => {}),
-              itemCount: 3,
+              itemCount: 10,
               padding: EdgeInsets.only(left: 7),
             ),
           ),

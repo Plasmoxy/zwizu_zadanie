@@ -29,6 +29,7 @@ class PlayerSingleElement extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
+            SizedBox(height: 4),
             // name of the player
             Text(
               "John Doe",
@@ -38,6 +39,7 @@ class PlayerSingleElement extends StatelessWidget {
               ),
               softWrap: true,
             ),
+            SizedBox(height: 4),
             // player label
             Text(
               "Champion".toUpperCase(),

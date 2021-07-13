@@ -63,6 +63,7 @@ class VideoSingleElement extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 4),
             // category
             Text(
               "TURNAJ 20".toUpperCase(),
@@ -72,6 +73,7 @@ class VideoSingleElement extends StatelessWidget {
                 color: AppTheme.grey50,
               ),
             ),
+            SizedBox(height: 4),
             // video title
             Text(
               "Souboj o truny xdxd 2 riadky mocno mocno",
