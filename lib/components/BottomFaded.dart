@@ -13,7 +13,7 @@ class BottomFaded extends StatelessWidget {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [Colors.black, Colors.transparent],
-        ).createShader(Rect.fromLTRB(0, 255, rect.width, rect.height));
+        ).createShader(Rect.fromLTRB(0, rect.height / 2, rect.width, rect.height));
       },
       blendMode: BlendMode.dstIn,
       child: this.child,

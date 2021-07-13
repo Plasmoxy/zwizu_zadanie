@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/apptheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
+import 'package:zwizu_zadanie/components/DateCountdown.dart';
 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -26,7 +27,12 @@ class Header extends StatelessWidget {
                 children: [
                   Text(
                     'NEJBLIŽŠÍ TURNAJ',
-                    style: TextStyle(fontWeight: FontWeight.w300, letterSpacing: 1),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 12,
+                      letterSpacing: 1,
+                      color: AppTheme.grey30,
+                    ),
                   ),
                   SizedBox(height: 10),
                   Text(
@@ -53,14 +59,7 @@ class Header extends StatelessWidget {
             padding: EdgeInsets.all(16),
             child: Column(
               children: [
-                Text(
-                  'Odpočet',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 1,
-                    color: AppTheme.black,
-                  ),
-                ),
+                DateCountdown(duration: Duration(days: 4, hours: 5, minutes: 20, seconds: 16)),
                 SizedBox(height: 10),
                 Row(
                   mainAxisSize: MainAxisSize.max,
