@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/apptheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
 import 'package:zwizu_zadanie/components/DateCountdown.dart';
+import 'package:zwizu_zadanie/pages/EmptyPage.dart';
+import 'package:zwizu_zadanie/util/utilities.dart';
 
 class Header extends StatefulWidget {
   final DateTime targetDate;
@@ -75,7 +77,7 @@ class _HeaderState extends State<Header> {
                   ),
                   AppButton(
                     title: "Více informací o turnaji",
-                    onPressed: () => {},
+                    onPressed: () => pushMaterialRoute(context, EmptyPage()),
                     color: Colors.yellow,
                   )
                 ],

@@ -13,6 +13,7 @@ class AppTheme {
         primaryColor: yellow,
         accentColor: yellow,
         backgroundColor: black,
+        splashColor: yellow,
         brightness: Brightness.dark,
         fontFamily: "Silka",
         cardTheme: CardTheme(
