@@ -22,7 +22,7 @@ class VideoSingleElement extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       child: Container(
         width: 230,
-        margin: EdgeInsets.symmetric(horizontal: 2),
+        margin: EdgeInsets.symmetric(horizontal: 5),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -1,8 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zwizu_zadanie">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
    <application
         android:label="zwizu_zadanie"
         android:icon="@mipmap/ic_launcher">
+        
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
