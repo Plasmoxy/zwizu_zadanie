@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppChip.dart';
 import 'package:zwizu_zadanie/models/VideoEntry.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class VideoSingleElement extends StatelessWidget {
   final void Function() onPressed;
@@ -86,7 +87,7 @@ class VideoSingleElement extends StatelessWidget {
                     Positioned(
                       top: 3,
                       right: 3,
-                      child: AppChip(text: "Premium"),
+                      child: AppChip(text: AppLocalizations.of(context)!.premium),
                     ),
                 ],
               ),
