@@ -11,6 +11,12 @@ class AppTheme {
         backgroundColor: black,
         brightness: Brightness.dark,
         fontFamily: "Silka",
+        cardTheme: CardTheme(
+          clipBehavior: Clip.antiAlias,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+        ),
       );
 
   static ButtonStyle get blackElevatedButton => ElevatedButton.styleFrom(
