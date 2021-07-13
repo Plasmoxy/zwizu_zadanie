@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 
 class PlayerSection extends StatelessWidget {
   const PlayerSection({Key? key}) : super(key: key);
@@ -6,9 +7,11 @@ class PlayerSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: null,
-      color: Colors.red,
-      height: 100,
+      child: Column(
+        children: [
+          SectionHeader(title: "Hráči"),
+        ],
+      ),
     );
   }
 }
