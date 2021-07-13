@@ -78,7 +78,7 @@ class _HeaderState extends State<Header> {
                   ),
                   AppButton(
                     title: "Více informací o turnaji",
-                    onPressed: () => pushMaterialRoute(context, EmptyPage()),
+                    onPressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
                     color: Colors.yellow,
                   )
                 ],
