@@ -37,7 +37,9 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 255),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: Header(),
+                    child: Header(
+                      targetDate: DateTime(2021, 11, 23),
+                    ),
                   ),
                   const SizedBox(height: 12),
                   VideoSection(),

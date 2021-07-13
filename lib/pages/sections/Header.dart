@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -5,8 +6,39 @@ import 'package:zwizu_zadanie/apptheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
 import 'package:zwizu_zadanie/components/DateCountdown.dart';
 
-class Header extends StatelessWidget {
-  const Header({Key? key}) : super(key: key);
+class Header extends StatefulWidget {
+  final DateTime targetDate;
+
+  const Header({
+    Key? key,
+    required this.targetDate,
+  }) : super(key: key);
+
+  @override
+  _HeaderState createState() => _HeaderState();
+}
+
+class _HeaderState extends State<Header> {
+  late Timer _refreshTimer;
+  Duration _countdownDuration = Duration.zero;
+
+  @override
+  void initState() {
+    // start the refresh timer of date countdown
+    _refreshTimer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (mounted)
+        setState(() {
+          _countdownDuration = widget.targetDate.difference(DateTime.now());
+        });
+    });
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _refreshTimer.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +91,7 @@ class Header extends StatelessWidget {
             padding: EdgeInsets.all(16),
             child: Column(
               children: [
-                DateCountdown(duration: Duration(days: 4, hours: 5, minutes: 20, seconds: 16)),
+                DateCountdown(duration: _countdownDuration),
                 SizedBox(height: 10),
                 Row(
                   mainAxisSize: MainAxisSize.max,
