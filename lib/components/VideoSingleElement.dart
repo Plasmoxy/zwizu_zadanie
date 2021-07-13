@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
+import 'package:zwizu_zadanie/components/AppChip.dart';
 import 'package:zwizu_zadanie/models/VideoEntry.dart';
 
 class VideoSingleElement extends StatelessWidget {
@@ -85,17 +86,7 @@ class VideoSingleElement extends StatelessWidget {
                     Positioned(
                       top: 3,
                       right: 3,
-                      child: Card(
-                        color: AppTheme.black.withOpacity(0.5),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
-                        child: Padding(
-                          padding: EdgeInsets.all(3),
-                          child: Text(
-                            'Premium',
-                            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
-                          ),
-                        ),
-                      ),
+                      child: AppChip(text: "Premium"),
                     ),
                 ],
               ),
