@@ -4,6 +4,7 @@ import 'package:zwizu_zadanie/mock/MockModels.dart';
 import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PlayerSection extends StatelessWidget {
   const PlayerSection({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class PlayerSection extends StatelessWidget {
       child: Column(
         children: [
           SectionHeader(
-            title: "Hráči",
+            title: AppLocalizations.of(context)!.players,
             onMorePressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
           ),
           SizedBox(

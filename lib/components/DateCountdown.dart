@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DateCountdown extends StatelessWidget {
   final Duration duration;
@@ -40,7 +41,7 @@ class DateCountdown extends StatelessWidget {
           SizedBox(width: 4),
           Padding(
             padding: EdgeInsets.only(bottom: 2),
-            child: Text("dní", style: unitStyle),
+            child: Text(AppLocalizations.of(context)!.days, style: unitStyle),
           ),
           SizedBox(width: 10),
 
@@ -52,7 +53,7 @@ class DateCountdown extends StatelessWidget {
           SizedBox(width: 4),
           Padding(
             padding: EdgeInsets.only(bottom: 2),
-            child: Text("hod", style: unitStyle),
+            child: Text(AppLocalizations.of(context)!.hours, style: unitStyle),
           ),
           SizedBox(width: 10),
 
@@ -64,7 +65,7 @@ class DateCountdown extends StatelessWidget {
           SizedBox(width: 4),
           Padding(
             padding: EdgeInsets.only(bottom: 2),
-            child: Text("min", style: unitStyle),
+            child: Text(AppLocalizations.of(context)!.mins, style: unitStyle),
           ),
           SizedBox(width: 10),
 
@@ -76,7 +77,7 @@ class DateCountdown extends StatelessWidget {
           SizedBox(width: 4),
           Padding(
             padding: EdgeInsets.only(bottom: 2),
-            child: Text("sek", style: unitStyle),
+            child: Text(AppLocalizations.of(context)!.secs, style: unitStyle),
           ),
         ],
       ),

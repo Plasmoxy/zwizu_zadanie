@@ -8,6 +8,7 @@ import 'package:zwizu_zadanie/components/DateCountdown.dart';
 import 'package:zwizu_zadanie/models/Tournament.dart';
 import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Header extends StatefulWidget {
   final Tournament tournament;
@@ -58,7 +59,7 @@ class _HeaderState extends State<Header> {
               child: Column(
                 children: [
                   Text(
-                    'NEJBLIŽŠÍ TURNAJ',
+                    AppLocalizations.of(context)!.closest_tournament.toUpperCase(),
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 12,
@@ -77,7 +78,7 @@ class _HeaderState extends State<Header> {
                     style: TextStyle(fontWeight: FontWeight.w300, fontSize: 16),
                   ),
                   AppButton(
-                    title: "Více informací o turnaji",
+                    title: AppLocalizations.of(context)!.more_info,
                     onPressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
                     color: Colors.yellow,
                   )
@@ -98,13 +99,13 @@ class _HeaderState extends State<Header> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      child: Text('Koupit ZZP'),
+                      child: Text(AppLocalizations.of(context)!.buyZZP),
                       onPressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
                       style: AppTheme.blackElevatedButton,
                     ),
                     SizedBox(width: 10),
                     OutlinedButton(
-                      child: Text('Vstupenky'),
+                      child: Text(AppLocalizations.of(context)!.tickets),
                       onPressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
                       style: AppTheme.blackOutlinedButton,
                     ),

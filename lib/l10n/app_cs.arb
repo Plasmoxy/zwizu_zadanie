@@ -1,4 +1,15 @@
 {
-  "premium": "Premiojum"
-  
+  "premium": "Premium",
+  "currently_popular": "Právě letí",
+  "closest_tournament": "Nejbližší turnaj",
+  "more_info": "Více informací o turnaji",
+  "buyZZP": "Koupit ZZP",
+  "tickets": "Vstupenky",
+  "days": "dní",
+  "hours": "hod",
+  "mins": "min",
+  "secs": "sek",
+  "more": "Více",
+  "players": "Hráči",
+  "back": "Spět"
 }

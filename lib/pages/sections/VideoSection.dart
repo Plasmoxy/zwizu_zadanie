@@ -5,6 +5,7 @@ import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/pages/VideoPlayerPage.dart';
 import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class VideoSection extends StatelessWidget {
   const VideoSection({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class VideoSection extends StatelessWidget {
       child: Column(
         children: [
           SectionHeader(
-            title: "Právě letí",
+            title: AppLocalizations.of(context)!.currently_popular,
             onMorePressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
           ),
           SizedBox(

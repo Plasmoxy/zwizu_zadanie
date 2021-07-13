@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SectionHeader extends StatelessWidget {
   final String title;
@@ -26,7 +27,7 @@ class SectionHeader extends StatelessWidget {
           AppButton(
             onPressed: onMorePressed,
             color: AppTheme.yellow,
-            title: "Více",
+            title: AppLocalizations.of(context)!.more,
           ),
         ],
       ),
