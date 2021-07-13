@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zwizu_zadanie/components/VideoSingleElement.dart';
 import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 
 class VideoSection extends StatelessWidget {
@@ -10,6 +11,7 @@ class VideoSection extends StatelessWidget {
       child: Column(
         children: [
           SectionHeader(title: "Právě letí"),
+          VideoSingleElement(),
         ],
       ),
     );

@@ -4,6 +4,8 @@ class AppTheme {
   static const yellow = Color(0xffffd302);
   static const black = Color(0xff161616);
   static const grey = Color(0xff373737);
+  static const grey50 = Color(0xff8d8d8d);
+  static const grey30 = Color(0xffc6c6c6);
 
   static ThemeData get theme => ThemeData(
         primaryColor: yellow,
