@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zwizu_zadanie/apptheme.dart';
+import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
 
 class SectionHeader extends StatelessWidget {

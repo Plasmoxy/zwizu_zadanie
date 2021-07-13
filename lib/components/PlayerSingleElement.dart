@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zwizu_zadanie/apptheme.dart';
+import 'package:zwizu_zadanie/AppTheme.dart';
 
 class PlayerSingleElement extends StatelessWidget {
   final void Function()? onPressed;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:zwizu_zadanie/apptheme.dart';
+import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/pages/HomePage.dart';
 
 void main() {
