@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/components/BottomFaded.dart';
-import 'package:zwizu_zadanie/components/Header.dart';
+import 'package:zwizu_zadanie/pages/sections/Header.dart';
+import 'package:zwizu_zadanie/pages/sections/PlayerSection.dart';
+import 'package:zwizu_zadanie/pages/sections/VideoSection.dart';
 import 'package:zwizu_zadanie/util/ipsum.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,6 +21,7 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Stack(
             children: [
+              // background:
               BottomFaded(
                 child: Image.asset(
                   "assets/tournament.jpg",
@@ -28,14 +31,19 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
 
-              Padding(
-                padding: EdgeInsets.all(16),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 255),
-                    Header(),
-                  ],
-                ),
+              // sections:
+              Column(
+                children: [
+                  const SizedBox(height: 255),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 13),
+                    child: Header(),
+                  ),
+                  const SizedBox(height: 12),
+                  VideoSection(),
+                  const SizedBox(height: 12),
+                  PlayerSection(),
+                ],
               ),
               // image
             ],
