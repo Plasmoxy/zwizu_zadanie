@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/components/BottomFaded.dart';
+import 'package:zwizu_zadanie/mock/MockModels.dart';
 import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/pages/sections/Header.dart';
 import 'package:zwizu_zadanie/pages/sections/PlayerSection.dart';
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Header(
-                      targetDate: DateTime(2021, 11, 23),
+                      tournament: MockModels.MOCK_TOURNAMENT,
                     ),
                   ),
                   const SizedBox(height: 12),

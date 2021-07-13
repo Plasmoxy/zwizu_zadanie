@@ -5,15 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
 import 'package:zwizu_zadanie/components/AppButton.dart';
 import 'package:zwizu_zadanie/components/DateCountdown.dart';
+import 'package:zwizu_zadanie/models/Tournament.dart';
 import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
 
 class Header extends StatefulWidget {
-  final DateTime targetDate;
+  final Tournament tournament;
 
   const Header({
     Key? key,
-    required this.targetDate,
+    required this.tournament,
   }) : super(key: key);
 
   @override
@@ -30,7 +31,7 @@ class _HeaderState extends State<Header> {
     _refreshTimer = Timer.periodic(Duration(seconds: 1), (timer) {
       if (mounted)
         setState(() {
-          _countdownDuration = widget.targetDate.difference(DateTime.now());
+          _countdownDuration = widget.tournament.date.difference(DateTime.now());
         });
     });
     super.initState();
@@ -67,7 +68,7 @@ class _HeaderState extends State<Header> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'TURNAJ 22',
+                    widget.tournament.name.toUpperCase(),
                     style: Theme.of(context).textTheme.headline1,
                   ),
                   SizedBox(height: 5),
