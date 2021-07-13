@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:zwizu_zadanie/apptheme.dart';
 import 'package:zwizu_zadanie/pages/HomePage.dart';
 
@@ -12,6 +13,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Zwizu zadanie',
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('cs'),
+        const Locale('sk'),
+      ],
+      locale: const Locale('cs'),
       theme: AppTheme.theme,
       home: HomePage(),
     );
