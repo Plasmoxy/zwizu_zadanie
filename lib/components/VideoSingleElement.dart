@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:zwizu_zadanie/apptheme.dart';
@@ -36,15 +38,20 @@ class VideoSingleElement extends StatelessWidget {
                   // play circle
                   Positioned.fill(
                     child: Center(
-                      child: Container(
-                        width: 50.0,
-                        height: 50.0,
-                        decoration: BoxDecoration(
-                          color: AppTheme.black.withOpacity(0.5),
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                            width: 1,
-                            color: Colors.white,
+                      child: ClipOval(
+                        child: BackdropFilter(
+                          filter: AppTheme.blurFilter,
+                          child: Container(
+                            width: 50.0,
+                            height: 50.0,
+                            decoration: BoxDecoration(
+                              color: AppTheme.black.withOpacity(0.5),
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                width: 1,
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -57,6 +64,23 @@ class VideoSingleElement extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(left: 5),
                         child: FaIcon(FontAwesomeIcons.play),
+                      ),
+                    ),
+                  ),
+
+                  // premium label
+                  Positioned(
+                    top: 3,
+                    right: 3,
+                    child: Card(
+                      color: AppTheme.black.withOpacity(0.5),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
+                      child: Padding(
+                        padding: EdgeInsets.all(3),
+                        child: Text(
+                          'Premium',
+                          style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
+                        ),
                       ),
                     ),
                   ),

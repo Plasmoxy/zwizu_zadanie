@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -44,4 +46,9 @@ class AppTheme {
         ),
         padding: EdgeInsets.symmetric(horizontal: 26, vertical: 15),
       );
+
+  static ImageFilter blurFilter = ImageFilter.blur(
+    sigmaX: 6.0,
+    sigmaY: 6.0,
+  );
 }

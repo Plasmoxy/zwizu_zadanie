@@ -47,10 +47,7 @@ class _HeaderState extends State<Header> {
       child: Column(
         children: [
           BackdropFilter(
-            filter: new ImageFilter.blur(
-              sigmaX: 6.0,
-              sigmaY: 6.0,
-            ),
+            filter: AppTheme.blurFilter,
             child: Container(
               color: AppTheme.grey.withOpacity(0.7),
               width: double.infinity,
