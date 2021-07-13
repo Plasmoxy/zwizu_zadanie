@@ -17,6 +17,11 @@ class AppTheme {
             borderRadius: BorderRadius.circular(10.0),
           ),
         ),
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
+          headline2: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+          button: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: Colors.white),
+        ),
       );
 
   static ButtonStyle get blackElevatedButton => ElevatedButton.styleFrom(
@@ -26,8 +31,7 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 23, vertical: 12),
-        textStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+        padding: EdgeInsets.symmetric(horizontal: 26, vertical: 15),
       );
 
   static ButtonStyle get blackOutlinedButton => OutlinedButton.styleFrom(
@@ -36,7 +40,6 @@ class AppTheme {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 23, vertical: 12),
-        textStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+        padding: EdgeInsets.symmetric(horizontal: 26, vertical: 15),
       );
 }

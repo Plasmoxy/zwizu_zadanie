@@ -31,7 +31,7 @@ class Header extends StatelessWidget {
                   SizedBox(height: 10),
                   Text(
                     'TURNAJ 22',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
+                    style: Theme.of(context).textTheme.headline1,
                   ),
                   SizedBox(height: 5),
                   Text(
@@ -71,7 +71,7 @@ class Header extends StatelessWidget {
                       onPressed: () => {},
                       style: AppTheme.blackElevatedButton,
                     ),
-                    SizedBox(width: 5),
+                    SizedBox(width: 10),
                     OutlinedButton(
                       child: Text('Vstupenky'),
                       onPressed: () => {},
