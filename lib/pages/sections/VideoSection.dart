@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/components/VideoSingleElement.dart';
 import 'package:zwizu_zadanie/mock/MockModels.dart';
 import 'package:zwizu_zadanie/pages/EmptyPage.dart';
+import 'package:zwizu_zadanie/pages/VideoPlayerPage.dart';
 import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
 
@@ -24,7 +25,7 @@ class VideoSection extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => VideoSingleElement(
                 videoEntry: MockModels.MOCK_VIDEO_ENTRIES[index],
-                onPressed: () => {},
+                onPressed: () => Utilities.pushMaterialRoute(context, VideoPlayerPage()),
               ),
               itemCount: MockModels.MOCK_VIDEO_ENTRIES.length,
               padding: EdgeInsets.only(left: 7),
