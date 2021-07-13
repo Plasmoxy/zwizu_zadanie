@@ -1,0 +1,73 @@
+name: zwizu_zadanie
+description: Zadanie pre zwizu.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^9.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/player.jpg
+    - assets/tournament.jpg
+    
+  fonts:
+    - family: Silka
+      fonts:
+        - asset: assets/fonts/Silka-Thin.otf
+          weight: 100
+        - asset: assets/fonts/Silka-ExtraLight.otf
+          weight: 200
+        - asset: assets/fonts/Silka-Light.otf
+          weight: 300
+        - asset: assets/fonts/Silka-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Silka-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Silka-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/Silka-Bold.otf
+          weight: 700
+        - asset: assets/fonts/Silka-Black.otf
+          weight: 900
+          
+        - asset: assets/fonts/Silka-ThinItalic.otf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/Silka-ExtraLightItalic.otf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/Silka-LightItalic.otf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Silka-RegularItalic.otf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/Silka-MediumItalic.otf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Silka-SemiBoldItalic.otf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/Silka-BoldItalic.otf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/Silka-BlackItalic.otf
+          weight: 900
+          style: italic
+        
+  
