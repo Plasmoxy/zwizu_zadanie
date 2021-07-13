@@ -57,7 +57,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
         automaticallyImplyLeading: false,
         title: AppBackButton(),
       ),
-      body: _playerWidget,
+      body: _playerWidget ?? Text('Loading player...'),
     );
   }
 }
