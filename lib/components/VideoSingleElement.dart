@@ -17,6 +17,7 @@ class VideoSingleElement extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       child: Container(
         width: 230,
+        margin: EdgeInsets.symmetric(horizontal: 2),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -79,7 +80,7 @@ class VideoSingleElement extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
               softWrap: true,
-            )
+            ),
           ],
         ),
       ),

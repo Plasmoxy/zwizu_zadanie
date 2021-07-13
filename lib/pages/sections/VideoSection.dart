@@ -11,8 +11,15 @@ class VideoSection extends StatelessWidget {
       child: Column(
         children: [
           SectionHeader(title: "Právě letí"),
-          VideoSingleElement(
-            onPressed: () => {},
+          SizedBox(
+            height: 200,
+            width: double.infinity,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) => VideoSingleElement(onPressed: () => {}),
+              itemCount: 3,
+              padding: EdgeInsets.only(left: 7),
+            ),
           ),
         ],
       ),
