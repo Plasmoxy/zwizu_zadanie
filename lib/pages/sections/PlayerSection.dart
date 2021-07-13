@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/components/PlayerSingleElement.dart';
+import 'package:zwizu_zadanie/mock/MockModels.dart';
 import 'package:zwizu_zadanie/pages/EmptyPage.dart';
 import 'package:zwizu_zadanie/pages/sections/SectionHeader.dart';
 import 'package:zwizu_zadanie/util/utilities.dart';
@@ -22,9 +23,10 @@ class PlayerSection extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => PlayerSingleElement(
+                player: MockModels.MOCK_PLAYERS[index],
                 onPressed: () => Utilities.pushMaterialRoute(context, EmptyPage()),
               ),
-              itemCount: 10,
+              itemCount: MockModels.MOCK_PLAYERS.length,
               padding: EdgeInsets.only(left: 7),
             ),
           ),

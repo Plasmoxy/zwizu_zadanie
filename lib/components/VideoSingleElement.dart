@@ -81,21 +81,22 @@ class VideoSingleElement extends StatelessWidget {
                   ),
 
                   // premium label
-                  Positioned(
-                    top: 3,
-                    right: 3,
-                    child: Card(
-                      color: AppTheme.black.withOpacity(0.5),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
-                      child: Padding(
-                        padding: EdgeInsets.all(3),
-                        child: Text(
-                          'Premium',
-                          style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
+                  if (videoEntry.isPremium)
+                    Positioned(
+                      top: 3,
+                      right: 3,
+                      child: Card(
+                        color: AppTheme.black.withOpacity(0.5),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
+                        child: Padding(
+                          padding: EdgeInsets.all(3),
+                          child: Text(
+                            'Premium',
+                            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
+                          ),
                         ),
                       ),
                     ),
-                  ),
                 ],
               ),
             ),

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:zwizu_zadanie/AppTheme.dart';
+import 'package:zwizu_zadanie/models/Player.dart';
 
 class PlayerSingleElement extends StatelessWidget {
   final void Function()? onPressed;
+  final Player player;
 
   const PlayerSingleElement({
     Key? key,
+    required this.player,
     this.onPressed,
   }) : super(key: key);
 
@@ -22,17 +25,24 @@ class PlayerSingleElement extends StatelessWidget {
           children: [
             // image
             Card(
-              child: Image.asset(
-                "assets/player.jpg",
-                width: double.infinity, // adapt to container width
-                height: 180,
-                fit: BoxFit.cover,
-              ),
+              child: (player.imageUrl == null)
+                  ? Image.asset(
+                      "assets/player.jpg",
+                      width: double.infinity, // adapt to container width
+                      height: 180,
+                      fit: BoxFit.cover,
+                    )
+                  : Image.network(
+                      player.imageUrl!,
+                      width: double.infinity, // adapt to container width
+                      height: 180,
+                      fit: BoxFit.cover,
+                    ),
             ),
             SizedBox(height: 4),
             // name of the player
             Text(
-              "John Doe",
+              player.name,
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
@@ -42,7 +52,7 @@ class PlayerSingleElement extends StatelessWidget {
             SizedBox(height: 4),
             // player label
             Text(
-              "Champion".toUpperCase(),
+              player.label.toUpperCase(),
               style: TextStyle(
                 fontSize: 10,
                 fontWeight: FontWeight.bold,
