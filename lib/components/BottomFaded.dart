@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class BottomFaded extends StatelessWidget {
   final Widget? child;
 
-  const BottomFaded({Key? key, this.child}) : super(key: key);
+  const BottomFaded({this.child}) : super();
 
   @override
   Widget build(BuildContext context) {

@@ -27,14 +27,20 @@ class _HeaderState extends State<Header> {
   late Timer _refreshTimer;
   Duration _countdownDuration = Duration.zero;
 
+  Future<Duration> calcDiff() async {
+    return widget.tournament.date.difference(DateTime.now().toLocal());
+  }
+
   @override
   void initState() {
     // start the refresh timer of date countdown
-    _refreshTimer = Timer.periodic(Duration(seconds: 1), (timer) {
-      if (mounted)
+    _refreshTimer = Timer.periodic(Duration(seconds: 1), (timer) async {
+      if (mounted) {
+        final newDur = await calcDiff();
         setState(() {
-          _countdownDuration = widget.tournament.date.difference(DateTime.now().toLocal());
+          _countdownDuration = newDur;
         });
+      }
     });
     super.initState();
   }

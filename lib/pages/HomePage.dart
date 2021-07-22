@@ -9,8 +9,6 @@ import 'package:zwizu_zadanie/pages/sections/VideoSection.dart';
 ///
 /// Includes background, header and sections.
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }

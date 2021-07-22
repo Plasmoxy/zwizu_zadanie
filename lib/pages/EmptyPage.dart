@@ -4,8 +4,6 @@ import 'package:zwizu_zadanie/components/AppBackButton.dart';
 
 /// Empty page with a back button
 class EmptyPage extends StatelessWidget {
-  const EmptyPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

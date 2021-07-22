@@ -12,8 +12,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 /// Contains section header with a scrollable list of videos.
 /// Leads to EmptyPage on header button click.
 class VideoSection extends StatelessWidget {
-  const VideoSection({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(

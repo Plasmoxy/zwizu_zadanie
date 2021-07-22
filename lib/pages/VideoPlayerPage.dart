@@ -6,8 +6,6 @@ import 'package:zwizu_zadanie/components/AppBackButton.dart';
 
 /// Video player page, plays a butterfly video
 class VideoPlayerPage extends StatefulWidget {
-  const VideoPlayerPage({Key? key}) : super(key: key);
-
   @override
   _VideoPlayerPageState createState() => _VideoPlayerPageState();
 }

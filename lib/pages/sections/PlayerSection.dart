@@ -11,8 +11,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 /// Contains a header and scrollable list of players.
 /// Leads to EmptyPage on header button click.
 class PlayerSection extends StatelessWidget {
-  const PlayerSection({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
